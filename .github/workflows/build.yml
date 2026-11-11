@@ -19,9 +19,10 @@ jobs:
         java-version: '17'
         distribution: 'temurin'
 
-    - name: Compilar Mod (.jar)
-      uses: gradle/gradle-build-action@v2
+    - name: Compilar Mod con Gradle
+      uses: eskatos/gradle-command-action@v3
       with:
+        gradle-version: '8.2'
         arguments: build
 
     - name: Guardar archivo .jar compilado
